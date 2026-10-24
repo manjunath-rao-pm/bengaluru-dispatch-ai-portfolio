@@ -1,6 +1,18 @@
 # Bengaluru Dispatch AI
 
-An interactive React + TypeScript + Vite + MapLibre portfolio demonstration of a road-following delivery in Bengaluru. Real OpenStreetMap geography supports synthetic logistics locations, events and KPIs. It demonstrates geographic rendering, deterministic simulation, distance-based animation and regression-tested UI behavior; it does not implement an AI dispatch optimizer or live operations.
+**Live Demo: https://bengaluru-dispatch-ai-portfolio.vercel.app/**
+
+Bengaluru Dispatch AI is an interactive logistics portfolio that makes a single road-following delivery easy to explore through a map-first operations interface. Built with React, TypeScript, Vite and MapLibre, it demonstrates product interaction design and engineering depth through deterministic simulation, locally generated road routes, automated tests and documented data provenance.
+
+## Implemented capabilities
+
+- **MapLibre 2D/3D:** interactive map views, camera controls and real building footprint extrusions.
+- **Locally generated road routing:** bundled route geometry generated with local OSRM from OpenStreetMap data; no runtime routing requests or routing API key.
+- **Deterministic delivery simulation:** reproducible single-delivery stages, distance-based scooter animation and pause/resume/reset controls.
+- **Automated tests:** regression coverage for route geometry, simulation and UI behavior.
+- **Documented data provenance:** source data, checksums, routing evidence, reproduction instructions and attribution.
+
+**Scope and roadmap:** All logistics locations, operations, events and KPIs are synthetic; this is not a live operations system. Intelligent multi-partner dispatch and AI optimization are future roadmap features, not implemented capabilities.
 
 ## Interactive features
 
