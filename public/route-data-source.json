@@ -1,0 +1,2551 @@
+{
+  "title": "Bengaluru local route dataset source package",
+  "attribution": "Geographic data © OpenStreetMap contributors; PBF extraction service BBBike; local routing OSRM Backend.",
+  "license": "ODbL-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "copyrightUrl": "https://www.openstreetmap.org/copyright",
+  "scope": "Complete route datasets and a direct checksum-verified original PBF download, offered on applicable ODbL terms. Pinned graph-regeneration instructions are in docs/LOCAL_OSRM_REPRODUCTION.md; no intermediate graph is distributed or claimed legally exempt.",
+  "reproductionUrl": "/source-data/REPRODUCTION.md",
+  "dataNoticeUrl": "/source-data/DATA_LICENSES.md",
+  "sourcePbf": {
+    "path": "public/source-data/planet_77.475,12.856_77.742,13.025.osm.pbf",
+    "downloadUrl": "/source-data/planet_77.475,12.856_77.742,13.025.osm.pbf",
+    "sha256": "35f6a67ad1ab6f356edd55f61afcbdc07994f8363cf011872c1298d2a0e08cc0",
+    "bytes": 31679641,
+    "datasetDate": "2026-10-24T00:00:00Z",
+    "source": "BBBike OpenStreetMap extract",
+    "license": "ODbL-1.0"
+  },
+  "datasets": [
+    {
+      "path": "src/data/bengaluru-delivery-roads.json",
+      "sha256": "7a156a86a83c4621e84debff7ac63059251a28efad39698b26995c7a44694b9f",
+      "data": {
+        "type": "FeatureCollection",
+        "metadata": {
+          "generatedDate": "2026-10-24",
+          "source": "Independently generated using local OSRM Docker and a BBBike OpenStreetMap extract.",
+          "sourceFile": "src/data/bengaluru-delivery-roads.json",
+          "osmExtractDate": "2026-10-24",
+          "routingSoftware": "OSRM Backend",
+          "attribution": "Road source data: © OpenStreetMap contributors, ODbL 1.0; extract supplied by BBBike. Routing software: OSRM Backend, run locally in Docker.",
+          "license": "ODbL-1.0 (underlying OpenStreetMap data; not an application source-code license)",
+          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+          "copyrightUrl": "https://www.openstreetmap.org/copyright",
+          "redistributionStatus": "Public distribution requirements for this OSM-derived fixture and extract must be reviewed; this snapshot does not establish legal clearance or additional permissions.",
+          "waypoints": [
+            {
+              "id": "PARTNER-1",
+              "original": [
+                77.616,
+                12.939
+              ],
+              "snapped": [
+                77.616316,
+                12.93893
+              ],
+              "snapDistanceMeters": 35.118905747755896
+            },
+            {
+              "id": "REST-1",
+              "original": [
+                77.622,
+                12.935
+              ],
+              "snapped": [
+                77.622071,
+                12.93511
+              ],
+              "snapDistanceMeters": 14.450402597971467
+            },
+            {
+              "id": "ORDER-1",
+              "original": [
+                77.625,
+                12.942
+              ],
+              "snapped": [
+                77.625027,
+                12.942039
+              ],
+              "snapDistanceMeters": 5.231410233186949
+            }
+          ],
+          "waypointNotes": "Synthetic original coordinates are retained; snapped points are route endpoints. Snap distances use haversine distance with mean Earth radius 6371008.8 m. No waypoint road names are asserted.",
+          "verification": "Candidate coordinates preserved exactly in order; two connected LineString legs and all three waypoint endpoints validated. OSRM distances and durations copied only from the local candidate. No maneuver, node-annotation, or raw-response verification is asserted.",
+          "osrmVersion": "v26.10.0",
+          "osrmVersionVerification": "Verified using osrm-extract --version (user-supplied provenance).",
+          "dockerImage": "ghcr.io/project-osrm/osrm-backend:latest",
+          "dockerImageDigestAtPull": "sha256:55dbfd47d984c2cacd64e32901b4321c86b5ec761438e69aa053dc78698a786f",
+          "extractionProfile": "/opt/car.lua",
+          "routingAlgorithm": "MLD",
+          "datasetSource": "BBBike OpenStreetMap extract",
+          "datasetFilename": "planet_77.475,12.856_77.742,13.025.osm.pbf",
+          "datasetDate": "2026-10-24T00:00:00Z",
+          "datasetDateSource": "Extraction log (user-supplied provenance).",
+          "pbfSha256": "35f6a67ad1ab6f356edd55f61afcbdc07994f8363cf011872c1298d2a0e08cc0",
+          "routeGenerationEndpoint": "http://localhost:5000",
+          "routeGenerationEndpointScope": "Local OSRM server on localhost:5000.",
+          "routingRequestParameters": {
+            "overview": "full",
+            "geometries": "geojson"
+          },
+          "durationNotice": "Route durations are car-profile estimates using /opt/car.lua, not live traffic ETAs."
+        },
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "leg": "pickup",
+              "from": "PARTNER-1",
+              "to": "REST-1",
+              "osrmDistanceMeters": 1022.6,
+              "osrmDurationSeconds": 139.1
+            },
+            "geometry": {
+              "coordinates": [
+                [
+                  77.616316,
+                  12.93893
+                ],
+                [
+                  77.616251,
+                  12.938649
+                ],
+                [
+                  77.616205,
+                  12.938608
+                ],
+                [
+                  77.616163,
+                  12.938591
+                ],
+                [
+                  77.616128,
+                  12.938589
+                ],
+                [
+                  77.616055,
+                  12.937992
+                ],
+                [
+                  77.616268,
+                  12.937882
+                ],
+                [
+                  77.616402,
+                  12.937821
+                ],
+                [
+                  77.616463,
+                  12.937633
+                ],
+                [
+                  77.616502,
+                  12.937497
+                ],
+                [
+                  77.617244,
+                  12.93723
+                ],
+                [
+                  77.617317,
+                  12.93719
+                ],
+                [
+                  77.617452,
+                  12.937116
+                ],
+                [
+                  77.617902,
+                  12.936984
+                ],
+                [
+                  77.618089,
+                  12.936896
+                ],
+                [
+                  77.618106,
+                  12.936878
+                ],
+                [
+                  77.618231,
+                  12.93702
+                ],
+                [
+                  77.618295,
+                  12.937101
+                ],
+                [
+                  77.61832,
+                  12.93714
+                ],
+                [
+                  77.618336,
+                  12.937173
+                ],
+                [
+                  77.618584,
+                  12.937804
+                ],
+                [
+                  77.618653,
+                  12.937771
+                ],
+                [
+                  77.618689,
+                  12.937746
+                ],
+                [
+                  77.618893,
+                  12.937619
+                ],
+                [
+                  77.619167,
+                  12.93745
+                ],
+                [
+                  77.619563,
+                  12.937217
+                ],
+                [
+                  77.619883,
+                  12.937016
+                ],
+                [
+                  77.620119,
+                  12.936868
+                ],
+                [
+                  77.620327,
+                  12.936745
+                ],
+                [
+                  77.620623,
+                  12.936564
+                ],
+                [
+                  77.620976,
+                  12.936341
+                ],
+                [
+                  77.621411,
+                  12.936066
+                ],
+                [
+                  77.621386,
+                  12.936015
+                ],
+                [
+                  77.621203,
+                  12.935643
+                ],
+                [
+                  77.622071,
+                  12.93511
+                ]
+              ],
+              "type": "LineString"
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "leg": "delivery",
+              "from": "REST-1",
+              "to": "ORDER-1",
+              "osrmDistanceMeters": 1448.9,
+              "osrmDurationSeconds": 175.8
+            },
+            "geometry": {
+              "coordinates": [
+                [
+                  77.622071,
+                  12.93511
+                ],
+                [
+                  77.622862,
+                  12.934625
+                ],
+                [
+                  77.623119,
+                  12.934467
+                ],
+                [
+                  77.623212,
+                  12.934673
+                ],
+                [
+                  77.623284,
+                  12.93485
+                ],
+                [
+                  77.623309,
+                  12.934883
+                ],
+                [
+                  77.623711,
+                  12.93464
+                ],
+                [
+                  77.623719,
+                  12.934636
+                ],
+                [
+                  77.623801,
+                  12.934585
+                ],
+                [
+                  77.624072,
+                  12.934965
+                ],
+                [
+                  77.624312,
+                  12.935187
+                ],
+                [
+                  77.624374,
+                  12.935242
+                ],
+                [
+                  77.624411,
+                  12.935271
+                ],
+                [
+                  77.625411,
+                  12.936113
+                ],
+                [
+                  77.626814,
+                  12.937233
+                ],
+                [
+                  77.626826,
+                  12.937243
+                ],
+                [
+                  77.626874,
+                  12.937281
+                ],
+                [
+                  77.626792,
+                  12.93738
+                ],
+                [
+                  77.62657,
+                  12.937658
+                ],
+                [
+                  77.626258,
+                  12.938045
+                ],
+                [
+                  77.626158,
+                  12.938183
+                ],
+                [
+                  77.626041,
+                  12.938391
+                ],
+                [
+                  77.625786,
+                  12.938945
+                ],
+                [
+                  77.625625,
+                  12.939318
+                ],
+                [
+                  77.625446,
+                  12.9397
+                ],
+                [
+                  77.625416,
+                  12.939754
+                ],
+                [
+                  77.625365,
+                  12.93985
+                ],
+                [
+                  77.625182,
+                  12.940088
+                ],
+                [
+                  77.624888,
+                  12.940405
+                ],
+                [
+                  77.624399,
+                  12.940901
+                ],
+                [
+                  77.62423,
+                  12.941065
+                ],
+                [
+                  77.624091,
+                  12.941206
+                ],
+                [
+                  77.624153,
+                  12.941256
+                ],
+                [
+                  77.624441,
+                  12.940964
+                ],
+                [
+                  77.624487,
+                  12.941013
+                ],
+                [
+                  77.624899,
+                  12.94141
+                ],
+                [
+                  77.625102,
+                  12.941607
+                ],
+                [
+                  77.62516,
+                  12.941607
+                ],
+                [
+                  77.625186,
+                  12.941935
+                ],
+                [
+                  77.625027,
+                  12.942039
+                ]
+              ],
+              "type": "LineString"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/local-routing/local-pickup-evidence.json",
+      "sha256": "30246c3c517a3fb126871e2a8ec8fcaae4ea76441dcd895ca0440076f364f02f",
+      "data": {
+        "code": "Ok",
+        "routes": [
+          {
+            "legs": [
+              {
+                "annotation": {
+                  "nodes": [
+                    12185869808,
+                    12185869807,
+                    12185869806,
+                    12185869805,
+                    12185869804,
+                    12185860698,
+                    12185860699,
+                    12185860700,
+                    12185869801,
+                    12185869802,
+                    5537267408,
+                    10980132316,
+                    363765940,
+                    363766230,
+                    10068956839,
+                    363766016,
+                    10068956819,
+                    304955782,
+                    11295532979,
+                    254920201,
+                    254920205,
+                    3399067461,
+                    10068956717,
+                    7834117239,
+                    309593140,
+                    6528476376,
+                    11780212819,
+                    304955848,
+                    309593051,
+                    308921397,
+                    254920217,
+                    308920401,
+                    11780212825,
+                    308920473,
+                    10538949032
+                  ],
+                  "distance": [
+                    31.87717646,
+                    6.744753198,
+                    4.930508007,
+                    3.804542709,
+                    66.51940383,
+                    26.12195267,
+                    16.03093523,
+                    21.82641515,
+                    15.62956033,
+                    85.76677895,
+                    9.073951716,
+                    16.78207399,
+                    50.96950016,
+                    22.50718054,
+                    2.714532325,
+                    20.75539278,
+                    11.33729693,
+                    5.096612446,
+                    4.04263346,
+                    74.81543031,
+                    8.330289682,
+                    4.786547513,
+                    26.21968537,
+                    35.12337353,
+                    50.11092653,
+                    41.23503226,
+                    30.39667538,
+                    26.35601963,
+                    37.85136651,
+                    45.56342755,
+                    56.15944792,
+                    6.260474364,
+                    45.6951084,
+                    111.1272669
+                  ]
+                },
+                "duration": 139.1,
+                "summary": "5th Cross Road, 4th Cross Road",
+                "weight": 139.1,
+                "distance": 1022.6,
+                "steps": [
+                  {
+                    "intersections": [
+                      {
+                        "classes": [
+                          "restricted"
+                        ],
+                        "out": 0,
+                        "entry": [
+                          true
+                        ],
+                        "bearings": [
+                          193
+                        ],
+                        "location": [
+                          77.616316,
+                          12.93893
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.616316,
+                          12.93893
+                        ],
+                        [
+                          77.616251,
+                          12.938649
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 193,
+                      "bearing_before": 0,
+                      "location": [
+                        77.616316,
+                        12.93893
+                      ],
+                      "modifier": "right",
+                      "type": "depart"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 7,
+                    "duration": 7,
+                    "distance": 31.9
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 2,
+                        "classes": [
+                          "restricted"
+                        ],
+                        "in": 0,
+                        "entry": [
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          15,
+                          105,
+                          255
+                        ],
+                        "location": [
+                          77.616251,
+                          12.938649
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.616251,
+                          12.938649
+                        ],
+                        [
+                          77.616205,
+                          12.938608
+                        ],
+                        [
+                          77.616163,
+                          12.938591
+                        ],
+                        [
+                          77.616128,
+                          12.938589
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 247,
+                      "bearing_before": 192,
+                      "location": [
+                        77.616251,
+                        12.938649
+                      ],
+                      "modifier": "right",
+                      "type": "turn"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 2.5,
+                    "duration": 2.5,
+                    "distance": 15.5
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 1,
+                        "classes": [
+                          "restricted"
+                        ],
+                        "in": 0,
+                        "entry": [
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          60,
+                          180,
+                          285
+                        ],
+                        "location": [
+                          77.616128,
+                          12.938589
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.616128,
+                          12.938589
+                        ],
+                        [
+                          77.616055,
+                          12.937992
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 185,
+                      "bearing_before": 243,
+                      "location": [
+                        77.616128,
+                        12.938589
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 10.2,
+                    "duration": 10.2,
+                    "distance": 66.5
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 1,
+                        "classes": [
+                          "restricted"
+                        ],
+                        "in": 0,
+                        "entry": [
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          0,
+                          120,
+                          180
+                        ],
+                        "location": [
+                          77.616055,
+                          12.937992
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "classes": [
+                          "restricted"
+                        ],
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          180,
+                          300
+                        ],
+                        "location": [
+                          77.616268,
+                          12.937882
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "classes": [
+                          "restricted"
+                        ],
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          105,
+                          285,
+                          345
+                        ],
+                        "location": [
+                          77.616502,
+                          12.937497
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "classes": [
+                          "restricted"
+                        ],
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          195,
+                          285
+                        ],
+                        "location": [
+                          77.617244,
+                          12.93723
+                        ]
+                      },
+                      {
+                        "out": 1,
+                        "in": 3,
+                        "entry": [
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          15,
+                          105,
+                          195,
+                          300
+                        ],
+                        "location": [
+                          77.617452,
+                          12.937116
+                        ]
+                      },
+                      {
+                        "out": 1,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          15,
+                          120,
+                          285
+                        ],
+                        "location": [
+                          77.617902,
+                          12.936984
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.616055,
+                          12.937992
+                        ],
+                        [
+                          77.616268,
+                          12.937882
+                        ],
+                        [
+                          77.616402,
+                          12.937821
+                        ],
+                        [
+                          77.616463,
+                          12.937633
+                        ],
+                        [
+                          77.616502,
+                          12.937497
+                        ],
+                        [
+                          77.617244,
+                          12.93723
+                        ],
+                        [
+                          77.617317,
+                          12.93719
+                        ],
+                        [
+                          77.617452,
+                          12.937116
+                        ],
+                        [
+                          77.617902,
+                          12.936984
+                        ],
+                        [
+                          77.618089,
+                          12.936896
+                        ],
+                        [
+                          77.618106,
+                          12.936878
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 116,
+                      "bearing_before": 185,
+                      "location": [
+                        77.616055,
+                        12.937992
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 39.9,
+                    "duration": 39.9,
+                    "distance": 267.4
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 3,
+                        "entry": [
+                          true,
+                          true,
+                          false,
+                          false
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225,
+                          300
+                        ],
+                        "location": [
+                          77.618106,
+                          12.936878
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.618106,
+                          12.936878
+                        ],
+                        [
+                          77.618231,
+                          12.93702
+                        ],
+                        [
+                          77.618295,
+                          12.937101
+                        ],
+                        [
+                          77.61832,
+                          12.93714
+                        ],
+                        [
+                          77.618336,
+                          12.937173
+                        ],
+                        [
+                          77.618584,
+                          12.937804
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 40,
+                      "bearing_before": 116,
+                      "location": [
+                        77.618106,
+                        12.936878
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "80 Feet Road",
+                    "mode": "driving",
+                    "weight": 15.4,
+                    "duration": 15.4,
+                    "distance": 116
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 1,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          15,
+                          120,
+                          195
+                        ],
+                        "location": [
+                          77.618584,
+                          12.937804
+                        ]
+                      },
+                      {
+                        "out": 1,
+                        "in": 3,
+                        "entry": [
+                          false,
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          30,
+                          120,
+                          195,
+                          300
+                        ],
+                        "location": [
+                          77.618653,
+                          12.937771
+                        ]
+                      },
+                      {
+                        "out": 1,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          30,
+                          120,
+                          300
+                        ],
+                        "location": [
+                          77.619167,
+                          12.93745
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.620119,
+                          12.936868
+                        ]
+                      },
+                      {
+                        "out": 1,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          30,
+                          120,
+                          300
+                        ],
+                        "location": [
+                          77.620327,
+                          12.936745
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.620623,
+                          12.936564
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.620976,
+                          12.936341
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.618584,
+                          12.937804
+                        ],
+                        [
+                          77.618653,
+                          12.937771
+                        ],
+                        [
+                          77.618689,
+                          12.937746
+                        ],
+                        [
+                          77.618893,
+                          12.937619
+                        ],
+                        [
+                          77.619167,
+                          12.93745
+                        ],
+                        [
+                          77.619563,
+                          12.937217
+                        ],
+                        [
+                          77.619883,
+                          12.937016
+                        ],
+                        [
+                          77.620119,
+                          12.936868
+                        ],
+                        [
+                          77.620327,
+                          12.936745
+                        ],
+                        [
+                          77.620623,
+                          12.936564
+                        ],
+                        [
+                          77.620976,
+                          12.936341
+                        ],
+                        [
+                          77.621411,
+                          12.936066
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 115,
+                      "bearing_before": 19,
+                      "location": [
+                        77.618584,
+                        12.937804
+                      ],
+                      "modifier": "right",
+                      "type": "turn"
+                    },
+                    "name": "5th Cross Road",
+                    "mode": "driving",
+                    "weight": 39.1,
+                    "duration": 39.1,
+                    "distance": 362.1
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 1,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.621411,
+                          12.936066
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.621411,
+                          12.936066
+                        ],
+                        [
+                          77.621386,
+                          12.936015
+                        ],
+                        [
+                          77.621203,
+                          12.935643
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 205,
+                      "bearing_before": 122,
+                      "location": [
+                        77.621411,
+                        12.936066
+                      ],
+                      "modifier": "right",
+                      "type": "turn"
+                    },
+                    "name": "17th B Main Road",
+                    "mode": "driving",
+                    "weight": 9,
+                    "duration": 9,
+                    "distance": 52
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 1,
+                        "in": 0,
+                        "entry": [
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          30,
+                          120,
+                          210
+                        ],
+                        "location": [
+                          77.621203,
+                          12.935643
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.621203,
+                          12.935643
+                        ],
+                        [
+                          77.622071,
+                          12.93511
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 120,
+                      "bearing_before": 205,
+                      "location": [
+                        77.621203,
+                        12.935643
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "4th Cross Road",
+                    "mode": "driving",
+                    "weight": 16,
+                    "duration": 16,
+                    "distance": 111.1
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "in": 0,
+                        "entry": [
+                          true
+                        ],
+                        "bearings": [
+                          302
+                        ],
+                        "location": [
+                          77.622071,
+                          12.93511
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.622071,
+                          12.93511
+                        ],
+                        [
+                          77.622071,
+                          12.93511
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 0,
+                      "bearing_before": 122,
+                      "location": [
+                        77.622071,
+                        12.93511
+                      ],
+                      "modifier": "right",
+                      "type": "arrive"
+                    },
+                    "name": "4th Cross Road",
+                    "mode": "driving",
+                    "weight": 0,
+                    "duration": 0,
+                    "distance": 0
+                  }
+                ]
+              }
+            ],
+            "weight_name": "routability",
+            "geometry": {
+              "coordinates": [
+                [
+                  77.616316,
+                  12.93893
+                ],
+                [
+                  77.616251,
+                  12.938649
+                ],
+                [
+                  77.616205,
+                  12.938608
+                ],
+                [
+                  77.616163,
+                  12.938591
+                ],
+                [
+                  77.616128,
+                  12.938589
+                ],
+                [
+                  77.616055,
+                  12.937992
+                ],
+                [
+                  77.616268,
+                  12.937882
+                ],
+                [
+                  77.616402,
+                  12.937821
+                ],
+                [
+                  77.616463,
+                  12.937633
+                ],
+                [
+                  77.616502,
+                  12.937497
+                ],
+                [
+                  77.617244,
+                  12.93723
+                ],
+                [
+                  77.617317,
+                  12.93719
+                ],
+                [
+                  77.617452,
+                  12.937116
+                ],
+                [
+                  77.617902,
+                  12.936984
+                ],
+                [
+                  77.618089,
+                  12.936896
+                ],
+                [
+                  77.618106,
+                  12.936878
+                ],
+                [
+                  77.618231,
+                  12.93702
+                ],
+                [
+                  77.618295,
+                  12.937101
+                ],
+                [
+                  77.61832,
+                  12.93714
+                ],
+                [
+                  77.618336,
+                  12.937173
+                ],
+                [
+                  77.618584,
+                  12.937804
+                ],
+                [
+                  77.618653,
+                  12.937771
+                ],
+                [
+                  77.618689,
+                  12.937746
+                ],
+                [
+                  77.618893,
+                  12.937619
+                ],
+                [
+                  77.619167,
+                  12.93745
+                ],
+                [
+                  77.619563,
+                  12.937217
+                ],
+                [
+                  77.619883,
+                  12.937016
+                ],
+                [
+                  77.620119,
+                  12.936868
+                ],
+                [
+                  77.620327,
+                  12.936745
+                ],
+                [
+                  77.620623,
+                  12.936564
+                ],
+                [
+                  77.620976,
+                  12.936341
+                ],
+                [
+                  77.621411,
+                  12.936066
+                ],
+                [
+                  77.621386,
+                  12.936015
+                ],
+                [
+                  77.621203,
+                  12.935643
+                ],
+                [
+                  77.622071,
+                  12.93511
+                ]
+              ],
+              "type": "LineString"
+            },
+            "weight": 139.1,
+            "duration": 139.1,
+            "distance": 1022.6
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "location": [
+              77.616316,
+              12.93893
+            ],
+            "name": "",
+            "distance": 35.15500408
+          },
+          {
+            "hint": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "location": [
+              77.622071,
+              12.93511
+            ],
+            "name": "4th Cross Road",
+            "distance": 14.40327163
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/local-routing/local-delivery-evidence.json",
+      "sha256": "c838ccb531ed30c6beed879888da6925edd019721fb92e86b6058cd01fb0211e",
+      "data": {
+        "code": "Ok",
+        "routes": [
+          {
+            "legs": [
+              {
+                "annotation": {
+                  "nodes": [
+                    308920473,
+                    10538949032,
+                    308920557,
+                    10538949031,
+                    11780212822,
+                    308918185,
+                    13518615592,
+                    11780212855,
+                    254920223,
+                    17327139,
+                    14206154063,
+                    14206154055,
+                    443224605,
+                    309592832,
+                    3801692790,
+                    12740817760,
+                    6017833815,
+                    11493493818,
+                    3740957803,
+                    3740957804,
+                    7263010443,
+                    3740957806,
+                    3145158634,
+                    11493846391,
+                    6536640226,
+                    11493846392,
+                    11493846395,
+                    11493846399,
+                    7263010444,
+                    3740957812,
+                    10873245761,
+                    1468540687,
+                    61746220,
+                    12069211436,
+                    10068956730,
+                    13161822527,
+                    4282466406,
+                    11493846417,
+                    11493846418,
+                    11493846419
+                  ],
+                  "distance": [
+                    101.2270926,
+                    32.91391714,
+                    24.92434983,
+                    21.08272359,
+                    4.548431168,
+                    51.24203227,
+                    0.9744161654,
+                    10.53638032,
+                    51.30445344,
+                    35.79779587,
+                    9.071371228,
+                    5.13948447,
+                    143.0139015,
+                    196.2970285,
+                    1.708695152,
+                    6.693649801,
+                    14.11155021,
+                    39.0671733,
+                    54.58332584,
+                    18.73068975,
+                    26.28132555,
+                    67.24632058,
+                    44.81116219,
+                    46.51099959,
+                    6.803470471,
+                    11.97596106,
+                    32.97923643,
+                    47.41045046,
+                    76.3339225,
+                    25.79754362,
+                    21.69900381,
+                    8.710012629,
+                    44.94764542,
+                    7.369107787,
+                    62.67275889,
+                    30.98804237,
+                    6.293999905,
+                    36.3961158,
+                    20.73850208
+                  ]
+                },
+                "duration": 175.8,
+                "summary": "Mahayogi Vemana Road, Srinivagilu Main Road",
+                "weight": 175.8,
+                "distance": 1448.9,
+                "steps": [
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "entry": [
+                          true
+                        ],
+                        "bearings": [
+                          122
+                        ],
+                        "location": [
+                          77.622071,
+                          12.93511
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.622071,
+                          12.93511
+                        ],
+                        [
+                          77.622862,
+                          12.934625
+                        ],
+                        [
+                          77.623119,
+                          12.934467
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 122,
+                      "bearing_before": 0,
+                      "location": [
+                        77.622071,
+                        12.93511
+                      ],
+                      "modifier": "right",
+                      "type": "depart"
+                    },
+                    "name": "4th Cross Road",
+                    "mode": "driving",
+                    "weight": 22.3,
+                    "duration": 22.3,
+                    "distance": 134.1
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          30,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.623119,
+                          12.934467
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.623119,
+                          12.934467
+                        ],
+                        [
+                          77.623212,
+                          12.934673
+                        ],
+                        [
+                          77.623284,
+                          12.93485
+                        ],
+                        [
+                          77.623309,
+                          12.934883
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 22,
+                      "bearing_before": 120,
+                      "location": [
+                        77.623119,
+                        12.934467
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "17th A Main Road",
+                    "mode": "driving",
+                    "weight": 15.4,
+                    "duration": 15.4,
+                    "distance": 50.6
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          false
+                        ],
+                        "bearings": [
+                          120,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.623309,
+                          12.934883
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.623309,
+                          12.934883
+                        ],
+                        [
+                          77.623711,
+                          12.93464
+                        ],
+                        [
+                          77.623719,
+                          12.934636
+                        ],
+                        [
+                          77.623801,
+                          12.934585
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 120,
+                      "bearing_before": 23,
+                      "location": [
+                        77.623309,
+                        12.934883
+                      ],
+                      "modifier": "right",
+                      "type": "turn"
+                    },
+                    "name": "5th Cross Road",
+                    "mode": "driving",
+                    "weight": 9.3,
+                    "duration": 9.3,
+                    "distance": 62.8
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 3,
+                        "entry": [
+                          true,
+                          true,
+                          false,
+                          false
+                        ],
+                        "bearings": [
+                          30,
+                          120,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.623801,
+                          12.934585
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          210,
+                          300
+                        ],
+                        "location": [
+                          77.624072,
+                          12.934965
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          false,
+                          false
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225
+                        ],
+                        "location": [
+                          77.624374,
+                          12.935242
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225
+                        ],
+                        "location": [
+                          77.624411,
+                          12.935271
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          225,
+                          315
+                        ],
+                        "location": [
+                          77.625411,
+                          12.936113
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.623801,
+                          12.934585
+                        ],
+                        [
+                          77.624072,
+                          12.934965
+                        ],
+                        [
+                          77.624312,
+                          12.935187
+                        ],
+                        [
+                          77.624374,
+                          12.935242
+                        ],
+                        [
+                          77.624411,
+                          12.935271
+                        ],
+                        [
+                          77.625411,
+                          12.936113
+                        ],
+                        [
+                          77.626814,
+                          12.937233
+                        ],
+                        [
+                          77.626826,
+                          12.937243
+                        ],
+                        [
+                          77.626874,
+                          12.937281
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 33,
+                      "bearing_before": 120,
+                      "location": [
+                        77.623801,
+                        12.934585
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "Mahayogi Vemana Road",
+                    "mode": "driving",
+                    "weight": 31.3,
+                    "duration": 31.3,
+                    "distance": 449
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 3,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          false,
+                          false,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225,
+                          315
+                        ],
+                        "location": [
+                          77.626874,
+                          12.937281
+                        ]
+                      },
+                      {
+                        "out": 2,
+                        "in": 0,
+                        "entry": [
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          135,
+                          225,
+                          315
+                        ],
+                        "location": [
+                          77.62657,
+                          12.937658
+                        ]
+                      },
+                      {
+                        "out": 2,
+                        "in": 0,
+                        "entry": [
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          150,
+                          225,
+                          330
+                        ],
+                        "location": [
+                          77.625786,
+                          12.938945
+                        ]
+                      },
+                      {
+                        "out": 2,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          150,
+                          330
+                        ],
+                        "location": [
+                          77.625416,
+                          12.939754
+                        ]
+                      },
+                      {
+                        "out": 3,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          150,
+                          225,
+                          330
+                        ],
+                        "location": [
+                          77.625365,
+                          12.93985
+                        ]
+                      },
+                      {
+                        "out": 3,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225,
+                          315
+                        ],
+                        "location": [
+                          77.624399,
+                          12.940901
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.626874,
+                          12.937281
+                        ],
+                        [
+                          77.626792,
+                          12.93738
+                        ],
+                        [
+                          77.62657,
+                          12.937658
+                        ],
+                        [
+                          77.626258,
+                          12.938045
+                        ],
+                        [
+                          77.626158,
+                          12.938183
+                        ],
+                        [
+                          77.626041,
+                          12.938391
+                        ],
+                        [
+                          77.625786,
+                          12.938945
+                        ],
+                        [
+                          77.625625,
+                          12.939318
+                        ],
+                        [
+                          77.625446,
+                          12.9397
+                        ],
+                        [
+                          77.625416,
+                          12.939754
+                        ],
+                        [
+                          77.625365,
+                          12.93985
+                        ],
+                        [
+                          77.625182,
+                          12.940088
+                        ],
+                        [
+                          77.624888,
+                          12.940405
+                        ],
+                        [
+                          77.624399,
+                          12.940901
+                        ],
+                        [
+                          77.62423,
+                          12.941065
+                        ],
+                        [
+                          77.624091,
+                          12.941206
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 320,
+                      "bearing_before": 50,
+                      "location": [
+                        77.626874,
+                        12.937281
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "Srinivagilu Main Road",
+                    "mode": "driving",
+                    "weight": 44.8,
+                    "duration": 44.8,
+                    "distance": 534.3
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 1,
+                        "entry": [
+                          true,
+                          false,
+                          true,
+                          true
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225,
+                          315
+                        ],
+                        "location": [
+                          77.624091,
+                          12.941206
+                        ]
+                      },
+                      {
+                        "out": 1,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false,
+                          false
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225,
+                          315
+                        ],
+                        "location": [
+                          77.624153,
+                          12.941256
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.624091,
+                          12.941206
+                        ],
+                        [
+                          77.624153,
+                          12.941256
+                        ],
+                        [
+                          77.624441,
+                          12.940964
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 49,
+                      "bearing_before": 315,
+                      "location": [
+                        77.624091,
+                        12.941206
+                      ],
+                      "modifier": "uturn",
+                      "type": "continue"
+                    },
+                    "name": "Srinivagilu Main Road",
+                    "mode": "driving",
+                    "weight": 12.7,
+                    "duration": 12.7,
+                    "distance": 53.7
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          315
+                        ],
+                        "location": [
+                          77.624441,
+                          12.940964
+                        ]
+                      },
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          45,
+                          135,
+                          225
+                        ],
+                        "location": [
+                          77.624899,
+                          12.94141
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.624441,
+                          12.940964
+                        ],
+                        [
+                          77.624487,
+                          12.941013
+                        ],
+                        [
+                          77.624899,
+                          12.94141
+                        ],
+                        [
+                          77.625102,
+                          12.941607
+                        ],
+                        [
+                          77.62516,
+                          12.941607
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 42,
+                      "bearing_before": 135,
+                      "location": [
+                        77.624441,
+                        12.940964
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 26.3,
+                    "duration": 26.3,
+                    "distance": 107.3
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "out": 0,
+                        "in": 2,
+                        "entry": [
+                          true,
+                          true,
+                          false
+                        ],
+                        "bearings": [
+                          0,
+                          120,
+                          255
+                        ],
+                        "location": [
+                          77.62516,
+                          12.941607
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.62516,
+                          12.941607
+                        ],
+                        [
+                          77.625186,
+                          12.941935
+                        ],
+                        [
+                          77.625027,
+                          12.942039
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 4,
+                      "bearing_before": 73,
+                      "location": [
+                        77.62516,
+                        12.941607
+                      ],
+                      "modifier": "left",
+                      "type": "turn"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 13.7,
+                    "duration": 13.7,
+                    "distance": 57.1
+                  },
+                  {
+                    "intersections": [
+                      {
+                        "in": 0,
+                        "entry": [
+                          true
+                        ],
+                        "bearings": [
+                          124
+                        ],
+                        "location": [
+                          77.625027,
+                          12.942039
+                        ]
+                      }
+                    ],
+                    "driving_side": "left",
+                    "geometry": {
+                      "coordinates": [
+                        [
+                          77.625027,
+                          12.942039
+                        ],
+                        [
+                          77.625027,
+                          12.942039
+                        ]
+                      ],
+                      "type": "LineString"
+                    },
+                    "maneuver": {
+                      "bearing_after": 0,
+                      "bearing_before": 304,
+                      "location": [
+                        77.625027,
+                        12.942039
+                      ],
+                      "modifier": "left",
+                      "type": "arrive"
+                    },
+                    "name": "",
+                    "mode": "driving",
+                    "weight": 0,
+                    "duration": 0,
+                    "distance": 0
+                  }
+                ]
+              }
+            ],
+            "weight_name": "routability",
+            "geometry": {
+              "coordinates": [
+                [
+                  77.622071,
+                  12.93511
+                ],
+                [
+                  77.622862,
+                  12.934625
+                ],
+                [
+                  77.623119,
+                  12.934467
+                ],
+                [
+                  77.623212,
+                  12.934673
+                ],
+                [
+                  77.623284,
+                  12.93485
+                ],
+                [
+                  77.623309,
+                  12.934883
+                ],
+                [
+                  77.623711,
+                  12.93464
+                ],
+                [
+                  77.623719,
+                  12.934636
+                ],
+                [
+                  77.623801,
+                  12.934585
+                ],
+                [
+                  77.624072,
+                  12.934965
+                ],
+                [
+                  77.624312,
+                  12.935187
+                ],
+                [
+                  77.624374,
+                  12.935242
+                ],
+                [
+                  77.624411,
+                  12.935271
+                ],
+                [
+                  77.625411,
+                  12.936113
+                ],
+                [
+                  77.626814,
+                  12.937233
+                ],
+                [
+                  77.626826,
+                  12.937243
+                ],
+                [
+                  77.626874,
+                  12.937281
+                ],
+                [
+                  77.626792,
+                  12.93738
+                ],
+                [
+                  77.62657,
+                  12.937658
+                ],
+                [
+                  77.626258,
+                  12.938045
+                ],
+                [
+                  77.626158,
+                  12.938183
+                ],
+                [
+                  77.626041,
+                  12.938391
+                ],
+                [
+                  77.625786,
+                  12.938945
+                ],
+                [
+                  77.625625,
+                  12.939318
+                ],
+                [
+                  77.625446,
+                  12.9397
+                ],
+                [
+                  77.625416,
+                  12.939754
+                ],
+                [
+                  77.625365,
+                  12.93985
+                ],
+                [
+                  77.625182,
+                  12.940088
+                ],
+                [
+                  77.624888,
+                  12.940405
+                ],
+                [
+                  77.624399,
+                  12.940901
+                ],
+                [
+                  77.62423,
+                  12.941065
+                ],
+                [
+                  77.624091,
+                  12.941206
+                ],
+                [
+                  77.624153,
+                  12.941256
+                ],
+                [
+                  77.624441,
+                  12.940964
+                ],
+                [
+                  77.624487,
+                  12.941013
+                ],
+                [
+                  77.624899,
+                  12.94141
+                ],
+                [
+                  77.625102,
+                  12.941607
+                ],
+                [
+                  77.62516,
+                  12.941607
+                ],
+                [
+                  77.625186,
+                  12.941935
+                ],
+                [
+                  77.625027,
+                  12.942039
+                ]
+              ],
+              "type": "LineString"
+            },
+            "weight": 175.8,
+            "duration": 175.8,
+            "distance": 1448.9
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "location": [
+              77.622071,
+              12.93511
+            ],
+            "name": "4th Cross Road",
+            "distance": 14.40327163
+          },
+          {
+            "hint": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "location": [
+              77.625027,
+              12.942039
+            ],
+            "name": "",
+            "distance": 5.215377409
+          }
+        ]
+      }
+    }
+  ]
+}

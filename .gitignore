@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Environment variables and API secrets
+.env
+.env.*
+!.env.example
+
+# Local builds and private source datasets
+*.tsbuildinfo
+*.osm.pbf
+*.osrm*
+
+# Deliberate ODbL source-access input; all other downloaded PBFs remain ignored.
+!public/source-data/planet_77.475,12.856_77.742,13.025.osm.pbf

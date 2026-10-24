@@ -1,0 +1,405 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generatedDate": "2026-10-24",
+    "source": "Independently generated using local OSRM Docker and a BBBike OpenStreetMap extract.",
+    "sourceFile": "src/data/bengaluru-delivery-roads.json",
+    "osmExtractDate": "2026-10-24",
+    "routingSoftware": "OSRM Backend",
+    "attribution": "Road source data: © OpenStreetMap contributors, ODbL 1.0; extract supplied by BBBike. Routing software: OSRM Backend, run locally in Docker.",
+    "license": "ODbL-1.0 (underlying OpenStreetMap data; not an application source-code license)",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "copyrightUrl": "https://www.openstreetmap.org/copyright",
+    "redistributionStatus": "Public distribution requirements for this OSM-derived fixture and extract must be reviewed; this snapshot does not establish legal clearance or additional permissions.",
+    "waypoints": [
+      {
+        "id": "PARTNER-1",
+        "original": [
+          77.616,
+          12.939
+        ],
+        "snapped": [
+          77.616316,
+          12.93893
+        ],
+        "snapDistanceMeters": 35.118905747755896
+      },
+      {
+        "id": "REST-1",
+        "original": [
+          77.622,
+          12.935
+        ],
+        "snapped": [
+          77.622071,
+          12.93511
+        ],
+        "snapDistanceMeters": 14.450402597971467
+      },
+      {
+        "id": "ORDER-1",
+        "original": [
+          77.625,
+          12.942
+        ],
+        "snapped": [
+          77.625027,
+          12.942039
+        ],
+        "snapDistanceMeters": 5.231410233186949
+      }
+    ],
+    "waypointNotes": "Synthetic original coordinates are retained; snapped points are route endpoints. Snap distances use haversine distance with mean Earth radius 6371008.8 m. No waypoint road names are asserted.",
+    "verification": "Candidate coordinates preserved exactly in order; two connected LineString legs and all three waypoint endpoints validated. OSRM distances and durations copied only from the local candidate. No maneuver, node-annotation, or raw-response verification is asserted.",
+    "osrmVersion": "v26.10.0",
+    "osrmVersionVerification": "Verified using osrm-extract --version (user-supplied provenance).",
+    "dockerImage": "ghcr.io/project-osrm/osrm-backend:latest",
+    "dockerImageDigestAtPull": "sha256:55dbfd47d984c2cacd64e32901b4321c86b5ec761438e69aa053dc78698a786f",
+    "extractionProfile": "/opt/car.lua",
+    "routingAlgorithm": "MLD",
+    "datasetSource": "BBBike OpenStreetMap extract",
+    "datasetFilename": "planet_77.475,12.856_77.742,13.025.osm.pbf",
+    "datasetDate": "2026-10-24T00:00:00Z",
+    "datasetDateSource": "Extraction log (user-supplied provenance).",
+    "pbfSha256": "35f6a67ad1ab6f356edd55f61afcbdc07994f8363cf011872c1298d2a0e08cc0",
+    "routeGenerationEndpoint": "http://localhost:5000",
+    "routeGenerationEndpointScope": "Local OSRM server on localhost:5000.",
+    "routingRequestParameters": {
+      "overview": "full",
+      "geometries": "geojson"
+    },
+    "durationNotice": "Route durations are car-profile estimates using /opt/car.lua, not live traffic ETAs."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "leg": "pickup",
+        "from": "PARTNER-1",
+        "to": "REST-1",
+        "osrmDistanceMeters": 1022.6,
+        "osrmDurationSeconds": 139.1
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            77.616316,
+            12.93893
+          ],
+          [
+            77.616251,
+            12.938649
+          ],
+          [
+            77.616205,
+            12.938608
+          ],
+          [
+            77.616163,
+            12.938591
+          ],
+          [
+            77.616128,
+            12.938589
+          ],
+          [
+            77.616055,
+            12.937992
+          ],
+          [
+            77.616268,
+            12.937882
+          ],
+          [
+            77.616402,
+            12.937821
+          ],
+          [
+            77.616463,
+            12.937633
+          ],
+          [
+            77.616502,
+            12.937497
+          ],
+          [
+            77.617244,
+            12.93723
+          ],
+          [
+            77.617317,
+            12.93719
+          ],
+          [
+            77.617452,
+            12.937116
+          ],
+          [
+            77.617902,
+            12.936984
+          ],
+          [
+            77.618089,
+            12.936896
+          ],
+          [
+            77.618106,
+            12.936878
+          ],
+          [
+            77.618231,
+            12.93702
+          ],
+          [
+            77.618295,
+            12.937101
+          ],
+          [
+            77.61832,
+            12.93714
+          ],
+          [
+            77.618336,
+            12.937173
+          ],
+          [
+            77.618584,
+            12.937804
+          ],
+          [
+            77.618653,
+            12.937771
+          ],
+          [
+            77.618689,
+            12.937746
+          ],
+          [
+            77.618893,
+            12.937619
+          ],
+          [
+            77.619167,
+            12.93745
+          ],
+          [
+            77.619563,
+            12.937217
+          ],
+          [
+            77.619883,
+            12.937016
+          ],
+          [
+            77.620119,
+            12.936868
+          ],
+          [
+            77.620327,
+            12.936745
+          ],
+          [
+            77.620623,
+            12.936564
+          ],
+          [
+            77.620976,
+            12.936341
+          ],
+          [
+            77.621411,
+            12.936066
+          ],
+          [
+            77.621386,
+            12.936015
+          ],
+          [
+            77.621203,
+            12.935643
+          ],
+          [
+            77.622071,
+            12.93511
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "leg": "delivery",
+        "from": "REST-1",
+        "to": "ORDER-1",
+        "osrmDistanceMeters": 1448.9,
+        "osrmDurationSeconds": 175.8
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            77.622071,
+            12.93511
+          ],
+          [
+            77.622862,
+            12.934625
+          ],
+          [
+            77.623119,
+            12.934467
+          ],
+          [
+            77.623212,
+            12.934673
+          ],
+          [
+            77.623284,
+            12.93485
+          ],
+          [
+            77.623309,
+            12.934883
+          ],
+          [
+            77.623711,
+            12.93464
+          ],
+          [
+            77.623719,
+            12.934636
+          ],
+          [
+            77.623801,
+            12.934585
+          ],
+          [
+            77.624072,
+            12.934965
+          ],
+          [
+            77.624312,
+            12.935187
+          ],
+          [
+            77.624374,
+            12.935242
+          ],
+          [
+            77.624411,
+            12.935271
+          ],
+          [
+            77.625411,
+            12.936113
+          ],
+          [
+            77.626814,
+            12.937233
+          ],
+          [
+            77.626826,
+            12.937243
+          ],
+          [
+            77.626874,
+            12.937281
+          ],
+          [
+            77.626792,
+            12.93738
+          ],
+          [
+            77.62657,
+            12.937658
+          ],
+          [
+            77.626258,
+            12.938045
+          ],
+          [
+            77.626158,
+            12.938183
+          ],
+          [
+            77.626041,
+            12.938391
+          ],
+          [
+            77.625786,
+            12.938945
+          ],
+          [
+            77.625625,
+            12.939318
+          ],
+          [
+            77.625446,
+            12.9397
+          ],
+          [
+            77.625416,
+            12.939754
+          ],
+          [
+            77.625365,
+            12.93985
+          ],
+          [
+            77.625182,
+            12.940088
+          ],
+          [
+            77.624888,
+            12.940405
+          ],
+          [
+            77.624399,
+            12.940901
+          ],
+          [
+            77.62423,
+            12.941065
+          ],
+          [
+            77.624091,
+            12.941206
+          ],
+          [
+            77.624153,
+            12.941256
+          ],
+          [
+            77.624441,
+            12.940964
+          ],
+          [
+            77.624487,
+            12.941013
+          ],
+          [
+            77.624899,
+            12.94141
+          ],
+          [
+            77.625102,
+            12.941607
+          ],
+          [
+            77.62516,
+            12.941607
+          ],
+          [
+            77.625186,
+            12.941935
+          ],
+          [
+            77.625027,
+            12.942039
+          ]
+        ],
+        "type": "LineString"
+      }
+    }
+  ]
+}
